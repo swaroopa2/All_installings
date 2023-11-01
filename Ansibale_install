@@ -1,0 +1,2 @@
+apt updaye -y
+apt install ansible -y
