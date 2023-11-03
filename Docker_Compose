@@ -1,0 +1,27 @@
+docker images
+docker ps -a
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+
+vi docker-compose.yml 
+==> [[ version: '3.7'
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8000:80"
+    volumes:
+      - ./app:/usr/share/nginx/html   ]]
+
+Docker-compose up
+Docker-compose start
+Docker compose ps
+Docker-compose down
+Docker-compose pause
+Docker-compose unpuse
+Docker-compose stop
+Docker-compose rm
+Docker-compose exec web ls -l
+
+
