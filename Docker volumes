@@ -1,0 +1,9 @@
+docker volumes ls
+docker volume crating sree
+docker volume insspect sree
+mkdir myvolumes  && cd myvolumes
+cd
+docker run -v /home/myvolumes/sree --name myagc1 -d -p 85:80 nginx:latest   (docker volums creating)
+docker run -v /home/myvolumes/sree --name myagc2-d -p 8082:8080 tomcat:latest
+docker run -v /home/myvolumes/sree --name agc3 -d -p  8081:8080 jenkins/jenkins:lts-jdk11
+docker exec -it myagc1 /bin/bash
